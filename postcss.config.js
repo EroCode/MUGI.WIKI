@@ -1,8 +1,6 @@
 module.exports = {
-    parser: 'sugarss',
-    plugins: {
-        'postcss-import': {},
-        'postcss-cssnext': {},
-        'cssnano': {}
-    }
+    plugins: [
+        require("postcss-cssnext")
+        // require('autoprefixer')
+    ]
 }
