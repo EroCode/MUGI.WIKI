@@ -12,30 +12,40 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: [{
-                            loader: 'css-loader',
-                            options: {
-                                importLoaders: 1
-                            }
-                        },
-                        'postcss-loader'
-                    ]
-                })
-
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1
+                        }
+                    },
+                    'postcss-loader'
+                ]
+                // use: ExtractTextPlugin.extract({
+                //     fallback: "style-loader",
+                //     use: [{
+                //             loader: 'css-loader',
+                //             options: {
+                //                 importLoaders: 1
+                //             }
+                //         },
+                //         'postcss-loader'
+                //     ]
+                // })
             },
             {
                 test: /(\.jsx|\.js)$/,
-                use: {
-                    loader: 'babel-loader'
-                },
+                use: [
+                    "babel-loader",
+                    "eslint-loader"
+                ],
                 exclude: /node_modules/
             }
         ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        new ExtractTextPlugin("bundle.css")
+        // new ExtractTextPlugin("bundle.css")
     ]
 };
