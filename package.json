@@ -1,30 +1,31 @@
 {
-  "name": "mugi.wiki",
-  "version": "0.0.1",
-  "description": "The frontend (Vue) of MUGI Project ",
-  "main": "index.js",
-  "dependencies": {
-    "lodash": "^4.17.4",
-    "vue": "^2.5.3",
-    "vue-server-renderer": "^2.5.3",
-    "vuex": "^3.0.1"
-  },
-  "devDependencies": {
-    "postcss-loader": "^2.0.8",
-    "webpack": "^3.8.1"
-  },
-  "scripts": {
-    "build": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EroCode/MUGI.WIKI.git"
-  },
-  "author": "dimpurr",
-  "license": "GPL",
-  "bugs": {
-    "url": "https://github.com/EroCode/MUGI.WIKI/issues"
-  },
-  "homepage": "https://github.com/EroCode/MUGI.WIKI#readme"
+    "name": "mugi.wiki",
+    "version": "0.0.1",
+    "description": "The frontend (Vue) of MUGI Project ",
+    "main": "index.js",
+    "dependencies": {
+        "lodash": "^4.17.4",
+        "vue": "^2.5.3",
+        "vue-server-renderer": "^2.5.3",
+        "vuex": "^3.0.1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^7.1.6",
+        "postcss-loader": "^2.0.8",
+        "webpack": "^3.8.1"
+    },
+    "scripts": {
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/EroCode/MUGI.WIKI.git"
+    },
+    "author": "dimpurr",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/EroCode/MUGI.WIKI/issues"
+    },
+    "homepage": "https://github.com/EroCode/MUGI.WIKI#readme"
 }
