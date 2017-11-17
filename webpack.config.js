@@ -1,9 +1,10 @@
 const path = require('path');
 // var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/main.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -34,6 +35,10 @@ module.exports = {
             // })
         },
         {
+            test: /\.vue$/,
+            loader: 'vue-loader'
+        },
+        {
             test: /(\.jsx|\.js)$/,
             use: [
                 'babel-loader',
@@ -45,6 +50,10 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        // new ExtractTextPlugin('bundle.css')
+        // new ExtractTextPlugin('bundle.css'),
+        new HtmlWebpackPlugin({
+            title: 'Output Management',
+            template: 'src/index.html'
+        })
     ]
 };
