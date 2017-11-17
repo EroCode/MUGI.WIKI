@@ -1,6 +1,16 @@
 # MUGI.WIKI
 The frontend (Vue) of MUGI Project
 
+## Command
+
+```bash
+npm install
+# webpack build
+npm run build
+# mock server localhost:3000
+npm run mock
+```
+
 ## Technology Stack
 
 * Webpack
@@ -14,7 +24,7 @@ The frontend (Vue) of MUGI Project
     * Vuex
     * vue-router
     * axios
-    * mock.js
+    * json-server // for mock
 * CSS
     * PostCSS
     * cssnext
